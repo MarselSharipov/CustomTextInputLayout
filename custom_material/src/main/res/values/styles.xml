@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Widget.Design.TextInputLayout" parent="android:Widget">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Design.TextInputEditText</item>
+        <item name="enforceMaterialTheme">false</item>
+        <item name="enforceTextAppearance">false</item>
+
+
+        <item name="boxBackgroundMode">none</item>
+        <item name="boxStrokeColor">@color/design_box_stroke_color</item>
+        <item name="passwordToggleTint">@color/design_icon_tint</item>
+        <item name="passwordToggleContentDescription">@string/password_toggle_content_description
+        </item>
+        <item name="errorIconDrawable">@null</item>
+<!--        <item name="startIconTint">@color/design_icon_tint</item>-->
+
+        <item name="counterTextAppearance">@style/TextAppearance.Design.Counter</item>
+        <item name="counterOverflowTextAppearance">@style/TextAppearance.Design.Counter.Overflow
+        </item>
+        <item name="errorTextAppearance">@style/TextAppearance.Design.Error</item>
+        <item name="helperTextTextAppearance">@style/TextAppearance.Design.HelperText</item>
+        <item name="hintTextAppearance">@style/TextAppearance.Design.Hint</item>
+        <item name="placeholderTextAppearance">@style/TextAppearance.Design.Placeholder</item>
+        <item name="prefixTextAppearance">@style/TextAppearance.Design.Prefix</item>
+        <item name="suffixTextAppearance">@style/TextAppearance.Design.Suffix</item>
+
+        <item name="counterTextColor">@null</item>
+        <item name="counterOverflowTextColor">@null</item>
+        <item name="errorTextColor">@null</item>
+        <item name="helperTextTextColor">@null</item>
+        <item name="hintTextColor">@null</item>
+        <item name="placeholderTextColor">@null</item>
+        <item name="prefixTextColor">@null</item>
+        <item name="suffixTextColor">@null</item>
+
+        <item name="shapeAppearance">@null</item>
+        <item name="shapeAppearanceOverlay">@null</item>
+    </style>
+
+    <!-- Base style for TextInputLayout. You should use one of the sub-styles instead. -->
+    <style name="Base.Widget.MaterialComponents.TextInputLayout" parent="Widget.Design.TextInputLayout">
+        <item name="enforceMaterialTheme">true</item>
+        <item name="enforceTextAppearance">true</item>
+
+        <item name="android:minWidth">@dimen/material_textinput_min_width</item>
+        <item name="android:maxWidth">@dimen/material_textinput_max_width</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxBackgroundColor">@null</item>
+        <item name="boxCollapsedPaddingTop">0dp</item>
+        <item name="boxStrokeColor">@color/mtrl_outlined_stroke_color</item>
+        <item name="boxStrokeErrorColor">@color/mtrl_error</item>
+        <item name="boxStrokeWidth">@dimen/mtrl_textinput_box_stroke_width_default</item>
+        <item name="boxStrokeWidthFocused">@dimen/mtrl_textinput_box_stroke_width_focused</item>
+
+        <item name="counterTextAppearance">?attr/textAppearanceCaption</item>
+        <item name="counterOverflowTextAppearance">?attr/textAppearanceCaption</item>
+        <item name="errorTextAppearance">?attr/textAppearanceCaption</item>
+        <item name="helperTextTextAppearance">?attr/textAppearanceCaption</item>
+        <item name="hintTextAppearance">?attr/textAppearanceCaption</item>
+        <item name="placeholderTextAppearance">?attr/textAppearanceSubtitle1</item>
+        <item name="prefixTextAppearance">?attr/textAppearanceSubtitle1</item>
+        <item name="suffixTextAppearance">?attr/textAppearanceSubtitle1</item>
+
+        <item name="counterTextColor">@color/mtrl_indicator_text_color</item>
+        <item name="counterOverflowTextColor">@color/mtrl_error</item>
+        <item name="errorTextColor">@color/mtrl_error</item>
+        <item name="helperTextTextColor">@color/mtrl_indicator_text_color</item>
+        <!-- The color of the label when it is collapsed and the text field is active -->
+        <item name="hintTextColor">?attr/colorPrimary</item>
+        <item name="placeholderTextColor">@color/mtrl_indicator_text_color</item>
+        <item name="prefixTextColor">@color/mtrl_indicator_text_color</item>
+        <item name="suffixTextColor">@color/mtrl_indicator_text_color</item>
+        <!-- The color of the label in all other text field states (such as resting and disabled) -->
+        <item name="android:textColorHint">@color/mtrl_indicator_text_color</item>
+
+        <item name="shapeAppearance">?attr/shapeAppearanceSmallComponent</item>
+        <item name="shapeAppearanceOverlay">@null</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.TextInputLayout.FilledBox" parent="Base.Widget.MaterialComponents.TextInputLayout">
+        <item name="materialThemeOverlay">
+            @style/ThemeOverlay.MaterialComponents.TextInputEditText.FilledBox
+        </item>
+        <item name="boxBackgroundMode">filled</item>
+        <item name="boxBackgroundColor">@color/mtrl_filled_background_color</item>
+<!--        <item name="startIconTint">@color/mtrl_filled_icon_tint</item>-->
+        <item name="boxCollapsedPaddingTop">10dp</item>
+        <item name="boxStrokeColor">@color/mtrl_filled_stroke_color</item>
+        <item name="shapeAppearanceOverlay">
+            @style/ShapeAppearanceOverlay.MaterialComponents.TextInputLayout.FilledBox
+        </item>
+    </style>
+
+    <style name="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="materialThemeOverlay">
+            @style/ThemeOverlay.MaterialComponents.TextInputEditText.FilledBox.Dense
+        </item>
+    </style>
+
+    <style name="Widget.MaterialComponents.TextInputLayout.OutlinedBox" parent="Base.Widget.MaterialComponents.TextInputLayout">
+        <item name="materialThemeOverlay">
+            @style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox
+        </item>
+        <item name="boxCollapsedPaddingTop">0dp</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="materialThemeOverlay">
+            @style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox.Dense
+        </item>
+    </style>
+
+
+    <style name="Widget.Design.TextInputEditText" parent="Widget.AppCompat.EditText">
+        <item name="enforceMaterialTheme">false</item>
+        <item name="enforceTextAppearance">false</item>
+    </style>
+
+    <!-- Base style for TextInputEditText. You should use one of the sub-styles instead. -->
+    <style name="Base.Widget.MaterialComponents.TextInputEditText" parent="Widget.Design.TextInputEditText">
+        <item name="enforceMaterialTheme">true</item>
+        <item name="enforceTextAppearance">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingStart" tools:ignore="NewApi">16dp</item>
+        <item name="android:paddingEnd" tools:ignore="NewApi">16dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <!-- Edit text's default text size is 16sp which currently equals to 22dp total line height, so
+             we need a total of 34dp to get the 56dp height of the default layout. -->
+        <item name="android:paddingTop">17dp</item>
+        <item name="android:paddingBottom">17dp</item>
+        <item name="android:textAppearance">?attr/textAppearanceSubtitle1</item>
+        <item name="textInputLayoutFocusedRectEnabled">true</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.TextInputEditText.FilledBox" parent="Base.Widget.MaterialComponents.TextInputEditText">
+        <!-- Padding values that total 34dp to visually match the spec. -->
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.TextInputEditText.FilledBox.Dense">
+        <!-- Dense layout height is 54dp so we need a total of 32dp of top and bottom padding. -->
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.TextInputEditText.OutlinedBox" parent="Base.Widget.MaterialComponents.TextInputEditText" />
+
+    <style name="Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense">
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingBottom">13dp</item>
+    </style>
+
+    <style name="ThemeOverlay.Design.TextInputEditText" parent=""/>
+
+    <style name="TextAppearance.Design.Counter" parent="TextAppearance.AppCompat.Caption"/>
+
+    <style name="TextAppearance.Design.Counter.Overflow" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/design_error</item>
+    </style>
+
+    <style name="TextAppearance.Design.Error" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/design_error</item>
+    </style>
+
+    <style name="TextAppearance.Design.HelperText" parent="TextAppearance.AppCompat.Caption"/>
+
+    <style name="TextAppearance.Design.Hint" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">?attr/colorControlActivated</item>
+    </style>
+
+    <style name="TextAppearance.Design.Placeholder" parent="TextAppearance.AppCompat.Body1"/>
+
+    <style name="TextAppearance.Design.Prefix" parent="TextAppearance.AppCompat.Body1"/>
+
+    <style name="TextAppearance.Design.Suffix" parent="TextAppearance.AppCompat.Body1"/>
+
+    <style name="ThemeOverlay.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.FilledBox</item>
+    </style>
+
+
+    <style name="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox</item>
+    </style>
+
+    <!-- Shape appearance styles. -->
+    <style name="ShapeAppearanceOverlay.MaterialComponents.TextInputLayout.FilledBox" parent="">
+        <item name="cornerSizeBottomLeft">@dimen/mtrl_textinput_box_corner_radius_small</item>
+        <item name="cornerSizeBottomRight">@dimen/mtrl_textinput_box_corner_radius_small</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox.Dense">
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingBottom">13dp</item>
+    </style>
+
+    <style name="ThemeOverlay.MaterialComponents.TextInputEditText.FilledBox.Dense">
+        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.FilledBox.Dense
+        </item>
+    </style>
+
+    <style name="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox.Dense">
+        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense
+        </item>
+    </style>
+
+    <style name="Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox" parent="Base.Widget.MaterialComponents.AutoCompleteTextView"/>
+
+    <style name="Base.Widget.MaterialComponents.AutoCompleteTextView" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="enforceMaterialTheme">true</item>
+        <item name="enforceTextAppearance">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingStart" tools:ignore="NewApi">16dp</item>
+        <item name="android:paddingEnd" tools:ignore="NewApi">16dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <!-- Edit text's default text size is 16sp which currently equals to 22dp total line height, so
+         we need a total of 34dp to get the 56dp height of the default layout. -->
+        <item name="android:paddingTop">17dp</item>
+        <item name="android:paddingBottom">17dp</item>
+        <item name="android:textAppearance">?attr/textAppearanceSubtitle1</item>
+        <item name="android:dropDownVerticalOffset">@dimen/mtrl_exposed_dropdown_menu_popup_vertical_offset</item>
+        <item name="android:popupElevation" tools:ignore="NewApi">@dimen/mtrl_exposed_dropdown_menu_popup_elevation</item>
+    </style>
+
+    <style name="ThemeOverlay.MaterialComponents.TextInputEditText" parent="ThemeOverlay.Design.TextInputEditText">
+        <item name="colorControlActivated">?attr/colorPrimary</item>
+        <item name="android:editTextBackground">@null</item>
+        <item name="editTextBackground">@null</item>
+    </style>
+
+</resources>
