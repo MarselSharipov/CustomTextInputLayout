@@ -10,7 +10,7 @@ import java.lang.reflect.Method
  * Created by Dinorah Tovar on 6/19/18
  * Password with
  */
-class CustomTextInputLayout
+class CustomTextInputLayout @JvmOverloads
 /**
  * Constructor
  * @param context Context
